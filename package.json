@@ -1,28 +1,26 @@
 {
-  "name": "bootstrap-daterangepicker",
-  "version": "2.1.14",
-  "description": "Date range picker component for Bootstrap",
-  "main": "daterangepicker.js",
-  "style": "daterangepicker.css",
+  "name": "bootstrap-rangepicker",
+  "version": "0.1",
+  "description": "Number range picker component for Bootstrap",
+  "main": "rangepicker.js",
+  "style": "rangepicker.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dangrossman/bootstrap-daterangepicker.git"
+    "url": "https://github.com/nahu/bootstrap-rangepicker.git"
   },
   "author": {
     "name": "Dan Grossman",
-    "email": "dan@dangrossman.info",
-    "url": "http://www.dangrossman.info"
+    "email": "jnahuelhernandez@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dangrossman/bootstrap-daterangepicker/issues"
+    "url": "https://github.com/nahu/bootstrap-rangepicker/issues"
   },
-  "homepage": "https://github.com/dangrossman/bootstrap-daterangepicker",
+  "homepage": "https://github.com/nahu/bootstrap-rangepicker",
   "dependencies": {
-    "jquery": "^1.10",
-    "moment": "^2.9.0"
+    "jquery": "^1.10"
   }
 }

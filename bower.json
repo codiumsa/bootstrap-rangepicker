@@ -1,20 +1,18 @@
 {
-  "name": "bootstrap-daterangepicker",
+  "name": "bootstrap-rangepicker",
+  "version": "0.1",
   "main": [
-    "daterangepicker.js",
-    "daterangepicker.css"
+    "rangepicker.js",
+    "rangepicker.css"
   ],
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests",
-    "moment.js",
-    "moment.min.js"
+    "tests"
   ],
   "dependencies": {
-    "jquery": ">=1.10",
-    "moment": ">=2.9.0"
+    "jquery": ">=1.10"
  }
 }

@@ -4,11 +4,11 @@
       <meta charset="UTF-8" />
       <title>A date range picker for Bootstrap</title>
       <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" media="all" href="daterangepicker.css" />
+      <link rel="stylesheet" type="text/css" media="all" href="rangepicker.css" />
       <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
       <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="moment.js"></script>
-      <script type="text/javascript" src="daterangepicker.js"></script>
+      <script type="text/javascript" src="rangepicker.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -35,23 +35,23 @@
               </div>
 
               <div class="form-group">
-                <label for="startDate">startDate</label>
-                <input type="text" class="form-control" id="startDate" value="07/01/2015">
+                <label for="startRange">startRange</label>
+                <input type="text" class="form-control" id="startRange" value="07/01/2015">
               </div>
 
               <div class="form-group">
-                <label for="endDate">endDate</label>
-                <input type="text" class="form-control" id="endDate" value="07/15/2015">
+                <label for="endRange">endRange</label>
+                <input type="text" class="form-control" id="endRange" value="07/15/2015">
               </div>
 
               <div class="form-group">
-                <label for="minDate">minDate</label>
-                <input type="text" class="form-control" id="minDate" value="" placeholder="MM/DD/YYYY">
+                <label for="minRange">minRange</label>
+                <input type="text" class="form-control" id="minRange" value="" placeholder="MM/DD/YYYY">
               </div>
 
               <div class="form-group">
-                <label for="maxDate">maxDate</label>
-                <input type="text" class="form-control" id="maxDate" value="" placeholder="MM/DD/YYYY">
+                <label for="maxRange">maxRange</label>
+                <input type="text" class="form-control" id="maxRange" value="" placeholder="MM/DD/YYYY">
               </div>
 
             </div>
@@ -65,7 +65,7 @@
 
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="singleDatePicker"> singleDatePicker
+                  <input type="checkbox" id="singleRangePicker"> singleRangePicker
                 </label>
               </div>
 
@@ -179,7 +179,7 @@
         <div class="row">
 
           <div class="col-md-4 col-md-offset-2 demo">
-            <h4>Your Date Range Picker</h4>
+            <h4>Your Range Range Picker</h4>
             <input type="text" id="config-demo" class="form-control">
             <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
           </div>
@@ -218,14 +218,14 @@
           $(this).parent().find('input').click();
         });
 
-        $('#startDate').daterangepicker({
-          singleDatePicker: true,
-          startDate: moment().subtract(6, 'days')
+        $('#startRange').rangepicker({
+          singleRangePicker: true,
+          startRange: moment().subtract(6, 'days')
         });
 
-        $('#endDate').daterangepicker({
-          singleDatePicker: true,
-          startDate: moment()
+        $('#endRange').rangepicker({
+          singleRangePicker: true,
+          startRange: moment()
         });
 
         updateConfig();
@@ -233,8 +233,8 @@
         function updateConfig() {
           var options = {};
 
-          if ($('#singleDatePicker').is(':checked'))
-            options.singleDatePicker = true;
+          if ($('#singleRangePicker').is(':checked'))
+            options.singleRangePicker = true;
           
           if ($('#showDropdowns').is(':checked'))
             options.showDropdowns = true;
@@ -295,17 +295,17 @@
           if ($('#parentEl').val().length)
             options.parentEl = $('#parentEl').val();
 
-          if ($('#startDate').val().length) 
-            options.startDate = $('#startDate').val();
+          if ($('#startRange').val().length) 
+            options.startRange = $('#startRange').val();
 
-          if ($('#endDate').val().length)
-            options.endDate = $('#endDate').val();
+          if ($('#endRange').val().length)
+            options.endRange = $('#endRange').val();
           
-          if ($('#minDate').val().length)
-            options.minDate = $('#minDate').val();
+          if ($('#minRange').val().length)
+            options.minRange = $('#minRange').val();
 
-          if ($('#maxDate').val().length)
-            options.maxDate = $('#maxDate').val();
+          if ($('#maxRange').val().length)
+            options.maxRange = $('#maxRange').val();
 
           if ($('#opens').val().length && $('#opens').val() != 'right')
             options.opens = $('#opens').val();
@@ -322,9 +322,9 @@
           if ($('#cancelClass').val().length && $('#cancelClass').val() != 'btn-default')
             options.cancelClass = $('#cancelClass').val();
 
-          $('#config-text').val("$('#demo').daterangepicker(" + JSON.stringify(options, null, '    ') + ", function(start, end, label) {\n  console.log(\"New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')\");\n});");
+          $('#config-text').val("$('#demo').rangepicker(" + JSON.stringify(options, null, '    ') + ", function(start, end, label) {\n  console.log(\"New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')\");\n});");
 
-          $('#config-demo').daterangepicker(options, function(start, end, label) { console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')'); });
+          $('#config-demo').rangepicker(options, function(start, end, label) { console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')'); });
           
         }
 

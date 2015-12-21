@@ -1,6 +1,6 @@
 /**
 * A stylesheet for use with Bootstrap 3.x
-* @author: Dan Grossman http://www.dangrossman.info/
+* @author: Dan Grossman http://www.nahu.info/
 * @copyright: Copyright (c) 2012-2015 Dan Grossman. All rights reserved.
 * @license: Licensed under the MIT license. See http://www.opensource.org/licenses/mit-license.php
 * @website: https://www.improvely.com/
@@ -8,7 +8,7 @@
 
 /* Container Appearance */
 
-.daterangepicker {
+.rangepicker {
   position: absolute;
   background: #fff;
   top: 100px;
@@ -19,7 +19,7 @@
   width:278px;
 }
 
-.daterangepicker.opensleft:before {
+.rangepicker.opensleft:before {
   position: absolute;
   top: -7px;
   right: 9px;
@@ -31,7 +31,7 @@
   content: '';
 }
 
-.daterangepicker.opensleft:after {
+.rangepicker.opensleft:after {
   position: absolute;
   top: -6px;
   right: 10px;
@@ -42,7 +42,7 @@
   content: '';
 }
 
-.daterangepicker.openscenter:before {
+.rangepicker.openscenter:before {
   position: absolute;
   top: -7px;
   left: 0;
@@ -58,7 +58,7 @@
   content: '';
 }
 
-.daterangepicker.openscenter:after {
+.rangepicker.openscenter:after {
   position: absolute;
   top: -6px;
   left: 0;
@@ -73,7 +73,7 @@
   content: '';
 }
 
-.daterangepicker.opensright:before {
+.rangepicker.opensright:before {
   position: absolute;
   top: -7px;
   left: 9px;
@@ -85,7 +85,7 @@
   content: '';
 }
 
-.daterangepicker.opensright:after {
+.rangepicker.opensright:after {
   position: absolute;
   top: -6px;
   left: 10px;
@@ -96,66 +96,66 @@
   content: '';
 }
 
-.daterangepicker.dropup{
+.rangepicker.dropup{
   margin-top: -5px;
 }
-.daterangepicker.dropup:before{
+.rangepicker.dropup:before{
   top: initial;
   bottom:-7px;
   border-bottom: initial;
   border-top: 7px solid #ccc;
 }
-.daterangepicker.dropup:after{
+.rangepicker.dropup:after{
   top: initial;
   bottom:-6px;
   border-bottom: initial;
   border-top: 6px solid #fff;
 }
 
-.daterangepicker.dropdown-menu {
+.rangepicker.dropdown-menu {
   max-width: none;
   z-index: 3000;
 }
 
-.daterangepicker.single .ranges, .daterangepicker.single .calendar {
+.rangepicker.single .ranges, .rangepicker.single .calendar {
   float: none;
 }
 
-.daterangepicker .calendar {
-  display: none;
+.rangepicker .calendar {
+/*  display: none;*/
   max-width: 270px;
   margin: 4px;
 }
 
-.daterangepicker.show-calendar .calendar {
+.rangepicker.show-calendar .calendar {
   display: block;
 }
 
-.daterangepicker .calendar.single .calendar-table {
+.rangepicker .calendar.single .calendar-table {
   border: none;
 }
 
 /* Calendars */
 
-.daterangepicker .calendar th, .daterangepicker .calendar td {
+.rangepicker .calendar th, .rangepicker .calendar td {
   white-space: nowrap;
   text-align: center;
   min-width: 32px;
 }
 
-.daterangepicker .calendar-table {
+.rangepicker .calendar-table {
   border: 1px solid #ddd;
   padding: 4px;
   border-radius: 4px;
   background: #fff;
 }
 
-.daterangepicker table {
+.rangepicker table {
   width: 100%;
   margin: 0;
 }
 
-.daterangepicker td, .daterangepicker th {
+.rangepicker td, .rangepicker th {
   text-align: center;
   width: 20px;
   height: 20px;
@@ -164,50 +164,50 @@
   cursor: pointer;
 }
 
-.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+.rangepicker td.off, .rangepicker td.off.in-range, .rangepicker td.off.start-date, .rangepicker td.off.end-date {
   color: #999;
   background: #fff;
 }
 
-.daterangepicker td.disabled, .daterangepicker option.disabled {
+.rangepicker td.disabled, .rangepicker option.disabled {
   color: #999;
   cursor: not-allowed;
   text-decoration: line-through;
 }
 
-.daterangepicker td.available:hover, .daterangepicker th.available:hover {
+.rangepicker td.available:hover, .rangepicker th.available:hover {
   background: #eee;
 }
 
-.daterangepicker td.in-range {
+.rangepicker td.in-range {
   background: #ebf4f8;
   border-radius: 0;
 }
 
-.daterangepicker td.start-date {
+.rangepicker td.start-date {
   border-radius: 4px 0 0 4px;
 }
 
-.daterangepicker td.end-date {
+.rangepicker td.end-date {
   border-radius: 0 4px 4px 0;
 }
 
-.daterangepicker td.start-date.end-date {
+.rangepicker td.start-date.end-date {
   border-radius: 4px;
 }
 
-.daterangepicker td.active, .daterangepicker td.active:hover {
+.rangepicker td.active, .rangepicker td.active:hover {
   background-color: #357ebd;
   border-color: #3071a9;
   color: #fff;
 }
 
-.daterangepicker td.week, .daterangepicker th.week {
+.rangepicker td.week, .rangepicker th.week {
   font-size: 80%;
   color: #ccc;
 }
 
-.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+.rangepicker select.monthselect, .rangepicker select.yearselect {
   font-size: 12px;
   padding: 1px;
   height: auto;
@@ -215,27 +215,27 @@
   cursor: default;
 }
 
-.daterangepicker select.monthselect {
+.rangepicker select.monthselect {
   margin-right: 2%;
   width: 56%;
 }
 
-.daterangepicker select.yearselect {
+.rangepicker select.yearselect {
   width: 40%;
 }
 
-.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.secondselect, .daterangepicker select.ampmselect {
+.rangepicker select.hourselect, .rangepicker select.minuteselect, .rangepicker select.secondselect, .rangepicker select.ampmselect {
   width: 50px;
   margin-bottom: 0;
 }
 
-.daterangepicker th.month {
+.rangepicker th.month {
   width: auto;
 }
 
 /* Text Input Above Each Calendar */
 
-.daterangepicker .input-mini {
+.rangepicker .input-mini {
   border: 1px solid #ccc;
   border-radius: 4px;
   color: #555;
@@ -248,23 +248,23 @@
   width: 100%;
 }
 
-.daterangepicker .input-mini.active {
+.rangepicker .input-mini.active {
   border: 1px solid #357ebd;
 }
 
-.daterangepicker .daterangepicker_input i {
+.rangepicker .rangepicker_input i {
   position: absolute;
   left: 8px;
   top: 8px;
 }
 
-.daterangepicker .daterangepicker_input {
+.rangepicker .rangepicker_input {
   position: relative;
 }
 
 /* Time Picker */
 
-.daterangepicker .calendar-time {
+.rangepicker .calendar-time {
   text-align: center;
   margin: 5px auto;
   line-height: 30px;
@@ -272,28 +272,28 @@
   padding-left: 28px;
 }
 
-.daterangepicker .calendar-time select.disabled {
+.rangepicker .calendar-time select.disabled {
   color: #ccc;
   cursor: not-allowed;
 }
 
 /* Predefined Ranges */
 
-.daterangepicker .ranges {
+.rangepicker .ranges {
   font-size: 11px;
   float: none;
   margin: 4px;
   text-align: left;
 }
 
-.daterangepicker .ranges ul {
+.rangepicker .ranges ul {
   list-style: none;
   margin: 0 auto;
   padding: 0;
   width: 100%;
 }
 
-.daterangepicker .ranges li {
+.rangepicker .ranges li {
   font-size: 13px;
   background: #f5f5f5;
   border: 1px solid #f5f5f5;
@@ -304,7 +304,7 @@
   cursor: pointer;
 }
 
-.daterangepicker .ranges li.active, .daterangepicker .ranges li:hover {
+.rangepicker .ranges li.active, .rangepicker .ranges li:hover {
   background: #08c;
   border: 1px solid #08c;
   color: #fff;
@@ -312,64 +312,64 @@
 
 /*  Larger Screen Styling */
 @media (min-width: 564px) {
-  .daterangepicker{
+  .rangepicker{
     width: auto;
   }
 
-  .daterangepicker .ranges ul {
+  .rangepicker .ranges ul {
     width: 160px;
   }
-  .daterangepicker.single .ranges ul {
+  .rangepicker.single .ranges ul {
     width: 100%;
   }
-  .daterangepicker .calendar.left .calendar-table {
+  .rangepicker .calendar.left .calendar-table {
     border-right: none;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .daterangepicker .calendar.right .calendar-table {
+  .rangepicker .calendar.right .calendar-table {
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
-  .daterangepicker .calendar.left {
+  .rangepicker .calendar.left {
     clear: left;
     margin-right: 0;
   }
-  .daterangepicker.single .calendar.left {
+  .rangepicker.single .calendar.left {
     clear: none;
   }
-  .daterangepicker.single .ranges,
-  .daterangepicker.single .calendar{
+  .rangepicker.single .ranges,
+  .rangepicker.single .calendar{
     float:left;
   }
 
-  .daterangepicker .calendar.right {
+  .rangepicker .calendar.right {
     margin-left: 0;
   }
 
-  .daterangepicker .left .daterangepicker_input {
+  .rangepicker .left .rangepicker_input {
     padding-right: 12px;
   }
 
-  .daterangepicker .calendar.left .calendar-table {
+  .rangepicker .calendar.left .calendar-table {
     padding-right: 12px;
   }
 
-  .daterangepicker .ranges,
-  .daterangepicker .calendar {
+  .rangepicker .ranges,
+  .rangepicker .calendar {
     float: left;
   }
 }
 
 @media (min-width: 730px) {
-  .daterangepicker .ranges {
+  .rangepicker .ranges {
     width: auto;
     float: left;
   }
-  .daterangepicker .calendar.left {
+  .rangepicker .calendar.left {
     clear: none;
   }
 }

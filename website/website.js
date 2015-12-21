@@ -12,14 +12,14 @@ $(document).ready(function() {
       $(this).parent().find('input').click();
     });
 
-    $('#startDate').daterangepicker({
-      singleDatePicker: true,
-      startDate: moment().subtract(6, 'days')
+    $('#startRange').rangepicker({
+      singleRangePicker: true,
+      startRange: moment().subtract(6, 'days')
     });
 
-    $('#endDate').daterangepicker({
-      singleDatePicker: true,
-      startDate: moment()
+    $('#endRange').rangepicker({
+      singleRangePicker: true,
+      startRange: moment()
     });
 
     updateConfig();
@@ -27,8 +27,8 @@ $(document).ready(function() {
     function updateConfig() {
       var options = {};
 
-      if ($('#singleDatePicker').is(':checked'))
-        options.singleDatePicker = true;
+      if ($('#singleRangePicker').is(':checked'))
+        options.singleRangePicker = true;
       
       if ($('#showDropdowns').is(':checked'))
         options.showDropdowns = true;
@@ -89,17 +89,17 @@ $(document).ready(function() {
       if ($('#parentEl').val().length)
         options.parentEl = $('#parentEl').val();
 
-      if ($('#startDate').val().length) 
-        options.startDate = $('#startDate').val();
+      if ($('#startRange').val().length) 
+        options.startRange = $('#startRange').val();
 
-      if ($('#endDate').val().length)
-        options.endDate = $('#endDate').val();
+      if ($('#endRange').val().length)
+        options.endRange = $('#endRange').val();
       
-      if ($('#minDate').val().length)
-        options.minDate = $('#minDate').val();
+      if ($('#minRange').val().length)
+        options.minRange = $('#minRange').val();
 
-      if ($('#maxDate').val().length)
-        options.maxDate = $('#maxDate').val();
+      if ($('#maxRange').val().length)
+        options.maxRange = $('#maxRange').val();
 
       if ($('#opens').val().length && $('#opens').val() != 'right')
         options.opens = $('#opens').val();
@@ -116,9 +116,9 @@ $(document).ready(function() {
       if ($('#cancelClass').val().length && $('#cancelClass').val() != 'btn-default')
         options.cancelClass = $('#cancelClass').val();
 
-      $('#config-text').val("$('#demo').daterangepicker(" + JSON.stringify(options, null, '    ') + ", function(start, end, label) {\n  console.log(\"New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')\");\n});");
+      $('#config-text').val("$('#demo').rangepicker(" + JSON.stringify(options, null, '    ') + ", function(start, end, label) {\n  console.log(\"New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')\");\n});");
 
-      $('#config-demo').daterangepicker(options, function(start, end, label) { console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')'); });
+      $('#config-demo').rangepicker(options, function(start, end, label) { console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')'); });
       
     }
 
