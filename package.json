@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-rangepicker",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "Number range picker component for Bootstrap",
   "main": "rangepicker.js",
   "style": "rangepicker.css",
@@ -17,9 +17,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nahu/bootstrap-rangepicker/issues"
+    "url": "https://github.com/codiumsa/bootstrap-rangepicker/issues"
   },
-  "homepage": "https://github.com/nahu/bootstrap-rangepicker",
+  "homepage": "https://github.com/codiumsa/bootstrap-rangepicker",
   "dependencies": {
     "jquery": "^1.10"
   }
