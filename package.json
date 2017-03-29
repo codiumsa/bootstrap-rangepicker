@@ -9,12 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nahu/bootstrap-rangepicker.git"
+    "url": "https://github.com/codiumsa/bootstrap-rangepicker.git"
   },
   "author": {
-    "name": "Dan Grossman",
-    "email": "jnahuelhernandez@gmail.com"
+    "name": "Nahuel Hernandez",
+    "email": "nahuel@codium.com.py"
   },
+  "contributors": [
+    {
+      "name": "Jorge Ramirez",
+      "email": "jorge@codium.com.py"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/codiumsa/bootstrap-rangepicker/issues"

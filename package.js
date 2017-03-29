@@ -1,6 +1,6 @@
 Package.describe({
-  name: 'nahu:bootstrap-rangepicker',
-  version: '0.1',
+  name: 'codiumsa:bootstrap-rangepicker',
+  version: '0.1.0',
   summary: 'Number range picker component for Bootstrap',
   git: 'https://github.com/nahu/bootstrap-rangepicker',
   documentation: 'README.md'
