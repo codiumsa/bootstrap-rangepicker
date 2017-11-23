@@ -90,7 +90,7 @@
                 '<div class="ranges">' +
                     '<div class="range_inputs">' +
                         '<button class="cancelBtn" type="button" style="margin-right: 3px;"></button>' +
-                        '<button class="applyBtn" disabled="disabled" type="button"></button> ' +
+                        '<button class="applyBtn" type="button"></button> ' +
                     '</div>' +
                 '</div>' +
             '</div>';
@@ -301,14 +301,6 @@
             if (!this.isShowing) {
                 this.updateElement();
             }
-
-            if (this.endRange && this.startRange) {
-                this.container.find('button.applyBtn').removeAttr('disabled');
-            } else {
-                this.container.find('button.applyBtn').attr('disabled', 'disabled');
-            }
-
-
         },
 
         setEndRange: function(endRange) {
@@ -328,12 +320,6 @@
 
             if (!this.isShowing) {
                 this.updateElement();
-            }
-
-            if (this.endRange && this.startRange) {
-                this.container.find('button.applyBtn').removeAttr('disabled');
-            } else {
-                this.container.find('button.applyBtn').attr('disabled', 'disabled');
             }
         },
 
@@ -364,12 +350,6 @@
             this.container.find('input[name=rangepicker_start]').val(this.startRange);
             if (this.endRange)
                 this.container.find('input[name=rangepicker_end]').val(this.endRange);
-
-            if (this.endRange && this.startRange) {
-                this.container.find('button.applyBtn').removeAttr('disabled');
-            } else {
-                this.container.find('button.applyBtn').attr('disabled', 'disabled');
-            }
         },
 
         move: function() {
@@ -548,11 +528,7 @@
                 } else {
                     this.container.find('input[name="rangepicker_end"]').val(this.endRange);
                 }
-                this.container.find('button.applyBtn').removeAttr('disabled');
-            } else {
-                this.container.find('button.applyBtn').attr('disabled', 'disabled');
             }
-
         },
 
         elementChanged: function() {
